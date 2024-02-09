@@ -3,13 +3,13 @@
 renc::renc(InterruptIn &A,InterruptIn &B):_A(A),_B(B){}
 
 void renc::a_slit(){
-    if(a != b)passed_slit++;
+    if(_A != _B)passed_slit++;
     else passed_slit--;
     return 0;
 }
 
 void renc::b_slit(){
-    if(a == b)passed_slit++;
+    if(_A == _B)passed_slit++;
     else passed_slit--;
     return 0;
 }
