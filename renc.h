@@ -5,6 +5,7 @@
 
 class renc{
     private:
+    InterruptIn &_A,&_B;
     void a_slit();
     void b_slit();
     float _ang;
@@ -12,8 +13,8 @@ class renc{
     int passed_slit;
 
     public:
-        renc(PinName A,PinName B);
-        float getangle();
+        renc(InterruptIn &A,InterruptIn &B);
+        void getangle();
         int getrev();
         void renc_read();
 };
