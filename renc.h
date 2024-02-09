@@ -9,6 +9,7 @@ class renc{
     void b_slit();
     float _ang;
     int _rev;
+    int passed_slit;
 
     public:
         renc(PinName A,PinName B);
