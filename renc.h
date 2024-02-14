@@ -5,17 +5,19 @@
 
 class renc{
     private:
+
     InterruptIn &_A,&_B;
-    void a_slit();
-    void b_slit();
     float _ang;
     int _rev;
     int passed_slit;
 
     public:
         renc(InterruptIn &A,InterruptIn &B);
+        void a_slit();
+        void b_slit();
         void getangle();
         int getrev();
         void renc_read();
 };
 #endif
+
