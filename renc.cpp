@@ -1,6 +1,6 @@
 #include "renc.h"
 #include "mbed.h"
-renc::renc(InterruptIn &A,InterruptIn &B):_A(A),_B(B){}
+renc::renc(InterruptIn &A,InterruptIn &B):_A(A),_B(B){;}
 
 void renc::a_slit(){
     if(_A != _B)passed_slit++;
@@ -13,11 +13,13 @@ void renc::b_slit(){
 }
 
 void renc::getangle(){
-        _A.rise(renc::a_slit());
-        _A.fall(renc::a_slit());
-        _B.rise(renc::b_slit());
-        _B.fall(renc::b_slit());
-        _ang = 0.45f * passed_slit;
+
+    _A.rise(renc::a_slit());
+    _A.fall(renc::a_slit());
+    _B.rise(renc::bslit());
+    _B.fall(renc::b_slit());
+    _ang = 0.45f * passed_slit;
+
 }
 
 int renc::getrev(){
@@ -31,3 +33,4 @@ void renc::renc_read(){
         //_angが返ってきてるはず
     }
 }
+
