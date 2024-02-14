@@ -16,7 +16,7 @@ void renc::getangle(){
 
     _A.rise(renc::a_slit());
     _A.fall(renc::a_slit());
-    _B.rise(renc::bslit());
+    _B.rise(renc::b_slit());
     _B.fall(renc::b_slit());
     _ang = 0.45f * passed_slit;
 
