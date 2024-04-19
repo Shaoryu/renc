@@ -14,10 +14,10 @@ void renc::b_slit(){
 
 void renc::getangle(){
 
-    _A.rise(renc::a_slit());
-    _A.fall(renc::a_slit());
-    _B.rise(renc::b_slit());
-    _B.fall(renc::b_slit());
+    _A.rise(callback(this,renc::a_slit()));
+    _A.fall(callback(this,renc::a_slit()));
+    _B.rise(callback(this,renc::b_slit()));
+    _B.fall(callback(this,renc::b_slit()));
     _ang = 0.45f * passed_slit;
 
 }
