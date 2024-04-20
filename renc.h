@@ -3,16 +3,19 @@
 
 #include "mbed.h"
 
-class renc{
+class renc
+{
     private:
 
-    InterruptIn &_A,&_B;
     float _ang;
     int _rev;
     int passed_slit;
+    
+    InterruptIn _A;
+    InterruptIn _B;
 
     public:
-        renc(InterruptIn &A,InterruptIn &B);
+        renc(PinName A,PinName B);
         void a_slit();
         void b_slit();
         void getangle();
